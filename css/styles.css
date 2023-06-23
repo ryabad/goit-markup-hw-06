@@ -1149,8 +1149,8 @@ fieldset {
 
 @media screen and (min-width: 1158px) {
   .header {
-    padding-top: 24px;
-    padding-bottom: 21px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .header-contacts-menu {
