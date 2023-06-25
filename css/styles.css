@@ -105,8 +105,6 @@ fieldset {
 }
 
 .header {
-  padding-top: 24px;
-  padding-bottom: 24px;
   border-bottom: 1px solid var(--main-border-color);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -115,6 +113,8 @@ fieldset {
 .header-nav {
   display: flex;
   align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .header-container {
@@ -536,7 +536,7 @@ fieldset {
 }
 
 .customers-item {
-  flex-basis: calc((100% - 16px) / 2);
+  width: calc((100% - 16px) / 2);
   height: 88px;
 }
 
@@ -546,7 +546,7 @@ fieldset {
   justify-content: center;
   width: 100%;
   height: 100%;
-  padding: 16px 32px;
+  padding: 16px 31px;
   border: 1px solid var(--second-border-color);
   border-radius: 4px;
   color: var(--second-border-color);
@@ -991,6 +991,7 @@ fieldset {
   background-color: transparent;
   padding-left: 16px;
   outline: none;
+  opacity: 0.3;
 }
 
 .footer-email::placeholder {
@@ -1039,26 +1040,62 @@ fieldset {
   .header-contacts {
     display: none;
   }
+
+  .footer-email {
+    min-width: 290px;
+  }
+
+  .modal {
+    width: 90%;
+  }
 }
 
 @media (min-width: 428px) and (max-width: 767px) {
+  .container {
+    max-width: 428px;
+  }
+
   .header-menu,
   .header-contacts {
     display: none;
   }
+
+  .modal {
+    width: 408px;
+  }
 }
 
 @media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .modal {
+    width: 408px;
+  }
+
+  .customers-container {
+    padding-left: 108px;
+    padding-right: 108px;
+  }
+
   .toggle-menu {
     display: none;
   }
 
   .header {
     border-bottom: 1px solid var(--main-border-color);
-    padding-top: 0;
-    padding-bottom: 0;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
       0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  }
+
+  .header-container {
+    align-items: center;
+  }
+
+  .header-nav {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .header-menu {
@@ -1073,8 +1110,8 @@ fieldset {
   }
 
   .header-contacts-link {
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 12px;
+    line-height: 1.16;
     letter-spacing: 0.02em;
     padding: 0;
   }
@@ -1085,6 +1122,12 @@ fieldset {
         var(--header-shadow)
       ),
       url(../images/banner-bg-tablet.jpg);
+  }
+
+  .banner-caption {
+    font-size: 56px;
+    line-height: 1.07;
+    margin-bottom: 36px;
   }
 
   .benefits-list {
@@ -1117,6 +1160,9 @@ fieldset {
     flex-direction: column;
     gap: 72px 24px;
     flex-wrap: wrap;
+    padding-left: 108px;
+    padding-right: 108px;
+    align-items: baseline;
   }
 
   .footer-logo-soc-container {
@@ -1133,6 +1179,10 @@ fieldset {
     margin-top: 0;
   }
 
+  .footer-soc-text {
+    text-align: left;
+  }
+
   .subscribe-text {
     text-align: left;
   }
@@ -1143,11 +1193,17 @@ fieldset {
   }
 
   .footer-email {
-    width: 264px;
+    min-width: 264px;
   }
 }
 
 @media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   .header {
     padding-top: 0;
     padding-bottom: 0;
@@ -1163,7 +1219,8 @@ fieldset {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    padding: 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 
   .banner {
@@ -1245,6 +1302,11 @@ fieldset {
     flex-basis: calc((100% - 72px) / 4);
   }
 
+  .customers {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
   .customers-menu {
     gap: 21px;
   }
@@ -1256,10 +1318,12 @@ fieldset {
   .footer-main-container {
     max-width: 100%;
     flex-direction: row;
-    gap: 24px;
+    gap: 80px;
     flex-wrap: wrap;
     justify-content: baseline;
     align-items: baseline;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .footer-logo-soc-container {
@@ -1290,7 +1354,7 @@ fieldset {
   }
 
   .footer-email {
-    width: 264px;
+    opacity: 1;
   }
 }
 
